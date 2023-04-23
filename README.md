@@ -1,0 +1,2 @@
+# ada-TRNG
+Ada TRNG (RDRAND, RDSEED)
