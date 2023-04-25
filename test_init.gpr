@@ -1,0 +1,20 @@
+with "aunit.gpr";
+
+project Test_Init is
+
+   for Languages use ("Ada");
+   for Source_Dirs use (".", "rdrand/");
+   for Object_Dir use "obj/";
+   for Create_Missing_Dirs use "True";
+   for Exec_Dir use ".";
+   for Main use ("test_init.adb");
+
+   package Compiler is
+      for Switches ("Ada") use ("-Os");
+   end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-shared");
+   end Binder;
+
+end Test_Init;
